@@ -34,13 +34,13 @@
 	1+ \ increase y for next time we're called
 ;
 
-: logo ( x y -- ) \ color illumos logo
+: logo ( x y -- ) \ color illumarine logo
 
 	framebuffer? if
 		s" term-putimage" sfind if
 			>r over	0 swap		( x y 0 x )
 			12 0 22 		( x y 0 x 12 0 22 )
-			s" /boot/illumos-logo.png"
+			s" /boot/illumarine-logo.png"
 			r> execute if 2drop exit then
 		else
 			drop
